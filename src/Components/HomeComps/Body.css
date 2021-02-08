@@ -1,0 +1,31 @@
+.body {
+  display: flex;
+  height: 60vh;
+  padding: 2% 10%;
+  grid-gap: 10px;
+  justify-content: center;
+  font-weight: 900;
+}
+
+.body__item {
+  cursor: pointer;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 35vh;
+  width: 15rem;
+  color: white;
+  border: 1px solid black;
+  text-align: center;
+  background: rgba(30, 30, 30, 255);
+  background-image: url("../../images/placeholder.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+a {
+  text-decoration: none;
+  height: 35vh;
+  width: 15rem;
+}

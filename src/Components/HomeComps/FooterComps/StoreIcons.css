@@ -1,0 +1,12 @@
+.store-icons {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 10%;
+  float: right;
+  width: 30%;
+}
+@media only screen and (max-width: 750px) {
+  .store-icons {
+    width: 50%;
+  }
+}

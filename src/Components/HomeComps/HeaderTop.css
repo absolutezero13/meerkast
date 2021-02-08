@@ -1,0 +1,29 @@
+.header-top {
+  display: flex;
+  height: 10vh;
+  background: rgba(1, 126, 254, 255);
+  color: white;
+  box-shadow: 3px 3px 10px black;
+  padding: 0 10%;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid black;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 220px;
+  font-weight: 900;
+}
+
+.nav button {
+  background: rgba(66, 66, 66, 255);
+  color: white;
+  font-size: 1 rem;
+  outline: none;
+  font-weight: 900;
+  height: 2rem;
+  cursor: pointer;
+}
