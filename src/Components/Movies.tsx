@@ -1,11 +1,25 @@
+import { render } from "@testing-library/react";
 import React from "react";
 import "./MoviesAndSeries.css";
-const Movies: React.FC = () => {
+import ListShowItem from "./ListShowItem";
+import { getVisibleShows } from "../Redux/Selector";
+import { connect } from "react-redux";
+
+const Movies: React.FC = (props: any) => {
   return (
     <div className="movies">
-      <h1>Movies</h1>
+      {props.movies.map((movie: any) => {
+        return <ListShowItem key={Math.random()} {...movie} />;
+      })}
     </div>
   );
 };
 
-export default Movies;
+const mapStateToProps = (state: any) => {
+  return {
+    movies: getVisibleShows(state.movies, state.filters),
+    filters: state.filters,
+  };
+};
+
+export default connect(mapStateToProps)(Movies);
