@@ -4,12 +4,13 @@ import "./MoviesAndSeries.css";
 import ListShowItem from "./ListShowItem";
 import { getVisibleShows } from "../Redux/Selector";
 import { connect } from "react-redux";
-
+import FilterShowItems from "./FilterShowItems";
 const Movies: React.FC = (props: any) => {
   return (
     <div className="movies">
+      <FilterShowItems />
       {props.movies.map((movie: any) => {
-        return <ListShowItem key={Math.random()} {...movie} />;
+        return <ListShowItem key={movie.id} {...movie} />;
       })}
     </div>
   );
@@ -18,7 +19,6 @@ const Movies: React.FC = (props: any) => {
 const mapStateToProps = (state: any) => {
   return {
     movies: getVisibleShows(state.movies, state.filters),
-    filters: state.filters,
   };
 };
 

@@ -6,6 +6,7 @@ import Footer from "./HomeComps/Footer";
 import Movies from "./Movies";
 import Series from "./Series";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
+
 const HomePage: React.FC = () => {
   return (
     <BrowserRouter>

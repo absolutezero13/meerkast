@@ -1,4 +1,4 @@
-import data from "../feed/sample.json";
+import data from "../feed/sample.json"; // same with require (I guess)
 
 const getData = (typeOfProgram: string) =>
   data.entries
@@ -16,17 +16,22 @@ const getData = (typeOfProgram: string) =>
       }
       return typeof a.title < typeof b.title ? -1 : 1;
     });
-const movieData = getData("movie");
-const serieData = getData("series");
-console.log(serieData);
+const movieData = getData("movie").map((movie: any, i) => ({
+  ...movie,
+  id: i,
+}));
+const serieData = getData("series").map((serie: any, i) => ({
+  ...serie,
+  id: i,
+}));
 const moviesReducerDefaultState = [...movieData];
 export const moviesReducer = (state: Object = moviesReducerDefaultState) => {
   return state;
 };
 const seriesReducerDefaultState = [...serieData];
-export const seriesReducer = (state:Object = seriesReducerDefaultState) => {
+export const seriesReducer = (state: Object = seriesReducerDefaultState) => {
   return state;
-} 
+};
 type Action = {
   type: string;
   text?: string;
@@ -54,3 +59,5 @@ export const filterReducer = (
       return state;
   }
 };
+
+const obj: { [k: string]: number } = {};
