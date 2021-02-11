@@ -16,13 +16,13 @@ const getData = (typeOfProgram: string) =>
       }
       return typeof a.title < typeof b.title ? -1 : 1;
     });
-const movieData = getData("movie").map((movie: any, i) => ({
+const movieData: Array<Object> = getData("movie").map((movie: any, i) => ({
   ...movie,
   id: i,
 }));
-const serieData = getData("series").map((serie: any, i) => ({
+const serieData: Array<Object> = getData("series").map((serie: any, i) => ({
   ...serie,
-  id: i,
+  id: i * 50,
 }));
 const moviesReducerDefaultState = [...movieData];
 export const moviesReducer = (state: Object = moviesReducerDefaultState) => {
