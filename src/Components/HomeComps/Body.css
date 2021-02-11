@@ -5,6 +5,7 @@
   grid-gap: 10px;
   justify-content: center;
   font-weight: 900;
+  margin-top: 8vh;
 }
 
 .body__item {
@@ -13,7 +14,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 35vh;
+  height: 40vh;
   width: 15rem;
   color: white;
   border: 1px solid black;
@@ -28,4 +29,26 @@ a {
   text-decoration: none;
   height: 35vh;
   width: 15rem;
+}
+body p {
+  transition: all 0.2s ease;
+}
+body p:hover {
+  color: rgba(1, 126, 254, 255);
+}
+@media only screen and (max-width: 600px) {
+  .body__item {
+    height: 30vh;
+    width: 13rem;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .body {
+    flex-direction: column;
+    padding-bottom: 30%;
+  }
+  .body__item {
+    height: 13rem;
+    width: 13rem;
+  }
 }
