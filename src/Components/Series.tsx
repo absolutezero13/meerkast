@@ -10,9 +10,11 @@ const Series: React.FC = (props: any) => {
   return (
     <div className="series">
       <FilterShowItems />
-      {props.series.map((serie: any) => {
-        return <ListShowItem key={serie.id} {...serie} />;
-      })}
+      <div className="series__items">
+        {props.series.map((serie: any) => {
+          return <ListShowItem key={serie.id} {...serie} />;
+        })}
+      </div>
     </div>
   );
 };

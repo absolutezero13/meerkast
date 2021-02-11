@@ -2,8 +2,14 @@
   display: flex;
   background: rgba(65, 65, 65, 255);
   color: white;
-  height: 8vh;
+  height: 5vh;
   padding: 0 10%;
   align-items: center;
   box-shadow: 3px 3px 9px gray;
+}
+@media only screen and (max-width: 600px) {
+  .header-bottom {
+    padding: 0 4%;
+    font-size: 70%;
+  }
 }

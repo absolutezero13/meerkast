@@ -1,21 +1,31 @@
 .extra {
   color: rgb(173, 170, 170);
-  padding: 0% 0 2% 10%;
+  padding: 1% 0 2% 10%;
 }
 
 .extra__terms {
   display: flex;
-  max-width: 80%;
-  justify-content: space-between;
+  width: auto;
+  justify-content: flex-start;
 }
 
 .extra__terms p {
   padding-right: 10px;
+  margin-right: 14px;
+  border-right: 1px solid blanchedalmond;
 }
 
 @media only screen and (max-width: 900px) {
-  .extra__terms {
-    max-width: 100%;
+  .extra {
     font-size: 80%;
+  }
+  .extra__terms {
+    flex-wrap: wrap;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .extra {
+    font-size: 60%;
   }
 }

@@ -9,9 +9,11 @@ const Movies: React.FC = (props: any) => {
   return (
     <div className="movies">
       <FilterShowItems />
-      {props.movies.map((movie: any) => {
-        return <ListShowItem key={movie.id} {...movie} />;
-      })}
+      <div className="movies__items">
+        {props.movies.map((movie: any) => {
+          return <ListShowItem key={movie.id} {...movie} />;
+        })}
+      </div>
     </div>
   );
 };

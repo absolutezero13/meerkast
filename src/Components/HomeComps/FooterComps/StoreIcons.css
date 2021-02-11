@@ -1,12 +1,26 @@
 .store-icons {
   display: flex;
-  justify-content: space-between;
   margin-right: 10%;
   float: right;
-  width: 30%;
+  width: auto;
+  padding-bottom: 20px 0;
+}
+.store-icons svg {
+  margin-left: 10px;
 }
 @media only screen and (max-width: 750px) {
   .store-icons {
-    width: 50%;
+    flex-wrap: wrap;
+  }
+  .store-icons svg {
+    width: 70px;
+    height: 30px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .store-icons svg {
+    width: 50px;
+    height: 25px;
   }
 }

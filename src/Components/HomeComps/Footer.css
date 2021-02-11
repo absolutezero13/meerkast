@@ -1,4 +1,4 @@
 footer {
   background: rgba(30, 30, 30, 255);
-  height: 22vh;
+  min-height: 20vh;
 }

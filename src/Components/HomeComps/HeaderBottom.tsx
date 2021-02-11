@@ -5,7 +5,7 @@ const HeaderBottom: React.FC = () => {
   return (
     <BrowserRouter>
       <div className="header-bottom">
-        <h2>Popular in Turkey </h2>
+        <h3>Popular in Turkey </h3>
       </div>
     </BrowserRouter>
   );

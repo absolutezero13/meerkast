@@ -7,11 +7,13 @@ import {
   setSortByDescendingTitle,
   setSortByDescendingYear,
 } from "../Redux/Actions";
+import "./FilterShowItems.css";
 
 const FilterShowItems: React.FC = (props: any) => {
   return (
-    <div>
+    <div className="filter-show-items">
       <input
+        placeholder="Search Shows.."
         type="search"
         value={props.filters.text}
         onChange={(e) => props.dispatch(setTextFilter(e.target.value))}
@@ -29,6 +31,9 @@ const FilterShowItems: React.FC = (props: any) => {
           }
         }}
       >
+        <option defaultValue="nothing" value="nothing">
+          Sort By
+        </option>
         <option value="ascending-year">Year (ascending)</option>
         <option value="descending-year">Year (descending)</option>
         <option value="ascending-title">Title (ascending)</option>

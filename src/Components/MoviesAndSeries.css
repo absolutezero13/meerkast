@@ -1,42 +1,30 @@
 .movies,
 .series {
-  height: 60vh;
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  border: 1px solid black;
-  padding: 1% 10% 3% 10%;
-  grid-gap: 0px;
+  min-height: 68vh;
 }
-
+.movies__items,
+.series__items {
+  display: flex;
+  padding: 1% 9% 1% 10%;
+  gap: 16px;
+  flex-flow: row wrap;
+}
 .movies p,
 .series p {
   display: flex;
   font-size: 0.8rem;
+  max-width: 70px;
+  max-height: 22px;
 }
 .movies img,
 .series img {
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 105px;
 }
-@media only screen and (max-width: 900px) {
-  .movies,
-  .series {
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-  }
-}
-@media only screen and (max-width: 500px) {
-  .movies,
-  .series {
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-  }
-}
-@media only screen and (max-width: 350px) {
-  .movies,
-  .series {
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(6, 1fr);
+@media only screen and (min-width: 1300px) {
+  .movies img,
+  .series img {
+    width: 90px;
+    height: 135px;
   }
 }

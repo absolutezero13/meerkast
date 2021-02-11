@@ -1,7 +1,15 @@
 .social-icons {
-  width: 15%;
+  width: auto;
   display: flex;
-  justify-content: space-between;
-  margin-left: 10%;
+  padding-left: 10%;
   float: left;
+}
+.social-icons svg {
+  margin-right: 12px;
+}
+@media only screen and (max-width: 600px) {
+  .social-icons svg {
+    width: 20px;
+    height: 20px;
+  }
 }
