@@ -8,4 +8,5 @@
 }
 .not-found-page a {
   color: rgba(1, 126, 254, 255);
+  text-decoration: none;
 }

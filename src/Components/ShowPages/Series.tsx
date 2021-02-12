@@ -5,8 +5,9 @@ import ListShowItem from "../ListShowItem/ListShowItem";
 import { getVisibleShows } from "../../Redux/Selector";
 import { connect } from "react-redux";
 import FilterShowItems from "../FilterShowItems/FilterShowItems";
+import { State } from "../../Redux/Reducers";
 
-const Series: React.FC = (props: any) => {
+const Series: React.FC<State> = (props) => {
   return (
     <div className="series">
       <FilterShowItems />
@@ -19,7 +20,7 @@ const Series: React.FC = (props: any) => {
   );
 };
 
-const mapStateToProps = (state: any) => {
+const mapStateToProps = (state: State) => {
   return {
     series: getVisibleShows(state.series, state.filters),
     filters: state.filters,

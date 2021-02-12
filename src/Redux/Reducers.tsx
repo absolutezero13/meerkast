@@ -1,5 +1,25 @@
 import data from "../feed/sample.json"; // same with require (I guess)
 
+export interface Show {
+  description: string;
+  id: number;
+  images: Object;
+  programType: string;
+  releaseYear: number;
+  title: string;
+}
+
+export interface Shows extends Array<Show> {}
+
+export interface State {
+  movies: Shows;
+  series: Shows;
+  filters: {
+    text: string;
+    sortBy: string;
+  };
+}
+
 const getData = (typeOfProgram: string) =>
   data.entries
     .filter(
@@ -16,11 +36,11 @@ const getData = (typeOfProgram: string) =>
       }
       return typeof a.title < typeof b.title ? -1 : 1;
     });
-export const movieData: Array<Object> = getData("movie").map((movie: any, i) => ({
+export const movieData: Shows = getData("movie").map((movie, i) => ({
   ...movie,
   id: i,
 }));
-export const serieData: Array<Object> = getData("series").map((serie: any, i) => ({
+export const serieData: Shows = getData("series").map((serie, i) => ({
   ...serie,
   id: i * 50,
 }));
@@ -32,9 +52,10 @@ const seriesReducerDefaultState = [...serieData];
 export const seriesReducer = (state: Object = seriesReducerDefaultState) => {
   return state;
 };
-type Action = {
+export type Action = {
   type: string;
   text?: string;
+  sortBy?: string;
 };
 const filterReducersDefaultState = {
   text: "",
@@ -43,7 +64,7 @@ const filterReducersDefaultState = {
 export const filterReducer = (
   state: Object = filterReducersDefaultState,
   action: Action
-) => {
+): Object => {
   switch (action.type) {
     case "SET_TEXT_FILTER":
       return { ...state, text: action.text };
@@ -59,5 +80,3 @@ export const filterReducer = (
       return state;
   }
 };
-
-const obj: { [k: string]: number } = {};

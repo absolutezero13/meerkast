@@ -8,6 +8,7 @@ import {
   setSortByDescendingYear,
 } from "../../Redux/Actions";
 import "./FilterShowItems.css";
+// import { State } from "../../Redux/Store";
 
 interface FilterShowItemsProps {
   filters: {
@@ -52,6 +53,7 @@ const FilterShowItems: React.FC<FilterShowItemsProps> = (props) => {
 };
 
 const mapStateToProps = (state: any) => {
+  console.log(state);
   return {
     filters: state.filters,
   };
