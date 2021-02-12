@@ -1,10 +1,10 @@
 import { render } from "@testing-library/react";
 import React from "react";
 import "./MoviesAndSeries.css";
-import ListShowItem from "./ListShowItem";
-import { getVisibleShows } from "../Redux/Selector";
+import ListShowItem from "../ListShowItem/ListShowItem";
+import { getVisibleShows } from "../../Redux/Selector";
 import { connect } from "react-redux";
-import FilterShowItems from "./FilterShowItems";
+import FilterShowItems from "../FilterShowItems/FilterShowItems";
 
 const Series: React.FC = (props: any) => {
   return (

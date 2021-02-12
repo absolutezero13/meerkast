@@ -1,10 +1,10 @@
 import React from "react";
-import HeaderTop from "./HomeComps/HeaderTop";
-import HeaderBottom from "./HomeComps/HeaderBottom";
-import Body from "./HomeComps/Body";
-import Footer from "./HomeComps/Footer";
-import Movies from "./Movies";
-import Series from "./Series";
+import HeaderTop from "./HeaderTop/HeaderTop";
+import HeaderBottom from "./HeaderBottom/HeaderBottom";
+import Body from "./Body/Body";
+import Footer from "./Footer/Footer";
+import Movies from "./ShowPages/Movies";
+import Series from "./ShowPages/Series";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 const HomePage: React.FC = () => {

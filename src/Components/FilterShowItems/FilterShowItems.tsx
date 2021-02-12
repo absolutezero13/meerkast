@@ -6,7 +6,7 @@ import {
   setSortByAscendingYear,
   setSortByDescendingTitle,
   setSortByDescendingYear,
-} from "../Redux/Actions";
+} from "../../Redux/Actions";
 import "./FilterShowItems.css";
 
 const FilterShowItems: React.FC = (props: any) => {
