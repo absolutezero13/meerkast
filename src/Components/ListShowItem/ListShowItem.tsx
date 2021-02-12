@@ -1,6 +1,16 @@
 import React from "react";
 import { connect } from "react-redux";
-const ListShowItem: React.FC = (props: any) => {
+
+interface PosterArt {
+  url: string;
+}
+interface ListShowItemProps {
+  title: string;
+  images: {
+    ["Poster Art"]: PosterArt;
+  };
+}
+const ListShowItem: React.FC<ListShowItemProps> = (props) => {
   return (
     <div>
       <img alt={props.title} src={props.images["Poster Art"].url} />

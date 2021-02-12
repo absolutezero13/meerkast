@@ -13,7 +13,7 @@ const Body: React.FC = () => {
         <div className=" body__item">
           <p>SERIES </p>
           <img src="../../../images/placeholder.png" alt="" />
-        </div>{" "}
+        </div>
       </NavLink>
     </div>
   );

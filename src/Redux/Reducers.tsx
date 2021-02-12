@@ -16,11 +16,11 @@ const getData = (typeOfProgram: string) =>
       }
       return typeof a.title < typeof b.title ? -1 : 1;
     });
-const movieData: Array<Object> = getData("movie").map((movie: any, i) => ({
+export const movieData: Array<Object> = getData("movie").map((movie: any, i) => ({
   ...movie,
   id: i,
 }));
-const serieData: Array<Object> = getData("series").map((serie: any, i) => ({
+export const serieData: Array<Object> = getData("series").map((serie: any, i) => ({
   ...serie,
   id: i * 50,
 }));

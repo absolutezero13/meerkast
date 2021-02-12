@@ -9,7 +9,15 @@ import {
 } from "../../Redux/Actions";
 import "./FilterShowItems.css";
 
-const FilterShowItems: React.FC = (props: any) => {
+interface FilterShowItemsProps {
+  filters: {
+    text: string;
+    sortBy: string;
+  };
+  dispatch: (x: any) => void;
+}
+
+const FilterShowItems: React.FC<FilterShowItemsProps> = (props) => {
   return (
     <div className="filter-show-items">
       <input

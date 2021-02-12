@@ -1,0 +1,11 @@
+.not-found-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 7%;
+
+  height: 68vh;
+}
+.not-found-page a {
+  color: rgba(1, 126, 254, 255);
+}
