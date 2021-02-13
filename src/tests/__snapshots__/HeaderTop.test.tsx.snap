@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`headertop matches snapshot 1`] = `
+<div>
+  <div
+    class="header-top"
+  >
+    <img
+      src="mirket.png"
+    />
+    <h1>
+      Meerkast
+    </h1>
+    <div
+      class="nav"
+    >
+      <p>
+        Log in
+      </p>
+      <button>
+        Start your Free trial
+      </button>
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`body matches snapshot 1`] = `
+<div>
+  <div
+    class="body"
+  >
+    <a
+      href="/movies"
+    >
+      <div
+        class=" body__item"
+      >
+        <p>
+          MOVIES
+        </p>
+      </div>
+    </a>
+    <a
+      href="/series"
+    >
+      <div
+        class=" body__item"
+      >
+        <p>
+          SERIES 
+        </p>
+        <img
+          alt=""
+          src="../../../images/placeholder.png"
+        />
+      </div>
+    </a>
+  </div>
+</div>
+`;

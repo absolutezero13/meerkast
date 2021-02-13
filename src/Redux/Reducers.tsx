@@ -1,14 +1,22 @@
 import data from "../feed/sample.json"; // same with require (I guess)
 
+// Data Interfaces
 export interface Show {
   description: string;
   id: number;
-  images: Object;
+  images: Images;
   programType: string;
   releaseYear: number;
   title: string;
 }
-
+interface Images {
+  ["Poster Art"]: Poster;
+}
+interface Poster {
+  url: string;
+  width: number;
+  height: number;
+}
 export interface Shows extends Array<Show> {}
 
 export interface State {
@@ -19,7 +27,7 @@ export interface State {
     sortBy: string;
   };
 }
-
+// Organizing Data
 const getData = (typeOfProgram: string) =>
   data.entries
     .filter(

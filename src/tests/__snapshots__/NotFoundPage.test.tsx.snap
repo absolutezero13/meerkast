@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Not found page matches snapshot 1`] = `
+<div>
+  <div
+    class="not-found-page"
+  >
+    <h1>
+      ⚠️ PAGE NOT FOUND. GO BACK TO 
+      <a
+        href="/"
+      >
+        HOME. ➡️
+      </a>
+    </h1>
+  </div>
+   
+</div>
+`;

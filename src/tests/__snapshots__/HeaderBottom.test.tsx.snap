@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`header bottom matches snapshot 1`] = `
+<div>
+  <div
+    class="header-bottom"
+  >
+    <h3>
+      Popular in Turkey
+    </h3>
+  </div>
+</div>
+`;

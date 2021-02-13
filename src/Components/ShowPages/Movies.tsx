@@ -5,28 +5,19 @@ import { getVisibleShows } from "../../Redux/Selector";
 import { connect } from "react-redux";
 import FilterShowItems from "../FilterShowItems/FilterShowItems";
 import { State } from "../../Redux/Reducers";
-import { setTimeout } from "timers";
-import Loader from "../Loader/Loader";
+import { Show } from "../../Redux/Reducers";
 
 const Movies: React.FC<State> = (props) => {
-  const [loading, setLoading] = React.useState(true);
-  React.useEffect(() => {
-    setLoading(false);
-  }, []);
-  if (loading) {
-    return <Loader />;
-  } else {
-    return (
-      <div className="shows">
-        <FilterShowItems />
-        <div className="show__items">
-          {props.movies.map((movie: any) => {
-            return <ListShowItem key={movie.id} {...movie} />;
-          })}
-        </div>
+  return (
+    <div className="shows">
+      <FilterShowItems />
+      <div className="show__items">
+        {props.movies.map((movie: Show) => {
+          return <ListShowItem key={movie.title} {...movie} />;
+        })}
       </div>
-    );
-  }
+    </div>
+  );
 };
 
 const mapStateToProps = (state: State) => {

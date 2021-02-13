@@ -8,7 +8,8 @@ import {
   setSortByDescendingYear,
 } from "../../Redux/Actions";
 import "./FilterShowItems.css";
-// import { State } from "../../Redux/Store";
+
+import { State } from "../../Redux/Reducers";
 
 interface FilterShowItemsProps {
   filters: {
@@ -22,7 +23,7 @@ const FilterShowItems: React.FC<FilterShowItemsProps> = (props) => {
   return (
     <div className="filter-show-items">
       <input
-        placeholder="Search Shows.."
+        placeholder="Search Shows 🔍"
         type="search"
         value={props.filters.text}
         onChange={(e) => props.dispatch(setTextFilter(e.target.value))}
@@ -52,8 +53,7 @@ const FilterShowItems: React.FC<FilterShowItemsProps> = (props) => {
   );
 };
 
-const mapStateToProps = (state: any) => {
-  console.log(state);
+const mapStateToProps = (state: State) => {
   return {
     filters: state.filters,
   };
