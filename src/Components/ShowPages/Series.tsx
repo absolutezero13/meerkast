@@ -6,12 +6,20 @@ import { getVisibleShows } from "../../Redux/Selector";
 import { connect } from "react-redux";
 import FilterShowItems from "../FilterShowItems/FilterShowItems";
 import { State } from "../../Redux/Reducers";
-
+import Loader from "../Loader/Loader";
 const Series: React.FC<State> = (props) => {
+  const [loading, setLoading] = React.useState<boolean>(true);
+  React.useEffect(() => {
+    setLoading(false);
+  }, []);
+
+  if (loading) {
+    return <Loader />;
+  }
   return (
-    <div className="series">
+    <div className="shows">
       <FilterShowItems />
-      <div className="series__items">
+      <div className="show__items">
         {props.series.map((serie: any) => {
           return <ListShowItem key={serie.id} {...serie} />;
         })}

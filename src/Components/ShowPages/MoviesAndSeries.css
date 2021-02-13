@@ -1,65 +1,25 @@
-.movies,
-.series {
+.shows {
   min-height: 68vh;
 }
-.movies__items,
-.series__items {
+.show__items {
   display: flex;
   padding: 1% 9% 1% 10%;
   gap: 16px;
   flex-flow: row wrap;
 }
-.movies p,
-.series p {
+.shows p {
   display: flex;
   font-size: 0.8rem;
   max-width: 70px;
   max-height: 22px;
 }
-.movies img,
-.series img {
+.shows img {
   width: 70px;
   height: 105px;
 }
 @media only screen and (min-width: 1300px) {
-  .movies img,
-  .series img {
+  .shows img {
     width: 90px;
     height: 135px;
   }
-}
-.loading {
-  height: 68vh;
-}
-
-.loader {
-  position: absolute;
-  top: 30%;
-  left: 45%;
-  width: 6em;
-  height: 6em;
-  border: 1.1em solid rgba(0, 0, 0, 0.2);
-  border-left: 1.1em solid #000000;
-  border-radius: 50%;
-  animation: load8 1.1s infinite linear;
-  transition: opacity 0.3s;
-}
-
-.loader--hide {
-  opacity: 0;
-}
-
-@keyframes load8 {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-.loading p {
-  position: absolute;
-  top: 25%;
-  left: 43%;
 }

@@ -17,7 +17,7 @@ const Extras: React.FC = () => {
         ))}
       </div>
       <p className="copyright">
-        Copyright Ⓒ 2021 Meerkast. All Rights Reserved
+        Copyright Ⓒ 2021 Meerkast. All Rights Reserved.
       </p>
     </div>
   );

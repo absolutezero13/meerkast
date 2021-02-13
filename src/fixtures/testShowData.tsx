@@ -1,6 +1,9 @@
-export const testShowData = [
+import { Shows } from "../Redux/Reducers";
+
+export const testShowData: Shows = [
   {
     title: "A new film",
+    id: 9999,
     description: "Lorem",
     programType: "movie",
     images: {
@@ -15,6 +18,7 @@ export const testShowData = [
   },
   {
     title: "Saw",
+    id: 998,
     description: "Lorem",
     programType: "movie",
     images: {
@@ -29,6 +33,7 @@ export const testShowData = [
   },
   {
     title: "South Park",
+    id: 997,
     description: "Lorem",
     programType: "series",
     images: {
@@ -43,6 +48,7 @@ export const testShowData = [
   },
   {
     title: "Breaking Bad",
+    id: 995,
     description: "Lorem",
     programType: "series",
     images: {
