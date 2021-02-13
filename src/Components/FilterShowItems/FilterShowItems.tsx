@@ -17,13 +17,14 @@ interface FilterShowItemsProps {
     sortBy: string;
   };
   dispatch: (x: any) => void;
+  placeholder: string;
 }
 
 const FilterShowItems: React.FC<FilterShowItemsProps> = (props) => {
   return (
     <div className="filter-show-items">
       <input
-        placeholder="Search Shows 🔍"
+        placeholder={"Search" + " " + props.placeholder + " " + "🔍"}
         type="search"
         value={props.filters.text}
         onChange={(e) => props.dispatch(setTextFilter(e.target.value))}

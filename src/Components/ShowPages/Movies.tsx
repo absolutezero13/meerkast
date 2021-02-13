@@ -10,7 +10,7 @@ import { Show } from "../../Redux/Reducers";
 const Movies: React.FC<State> = (props) => {
   return (
     <div className="shows">
-      <FilterShowItems />
+      <FilterShowItems placeholder={"movies"} />
       <div className="show__items">
         {props.movies.map((movie: Show) => {
           return <ListShowItem key={movie.title} {...movie} />;

@@ -9,7 +9,7 @@ import { State, Show } from "../../Redux/Reducers";
 const Series: React.FC<State> = (props) => {
   return (
     <div className="shows">
-      <FilterShowItems />
+      <FilterShowItems placeholder={"series"} />
       <div className="show__items">
         {props.series.map((serie: Show) => {
           return <ListShowItem key={serie.title} {...serie} />;
