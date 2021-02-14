@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`filter show items match snapshot 1`] = `
+<div>
+  <div
+    class="filter-show-items"
+  >
+    <input
+      data-testid="search"
+      placeholder="Search Search anything 🔍"
+      type="search"
+      value=""
+    />
+    <select
+      data-testid="select"
+    >
+      <option
+        value="nothing"
+      >
+        Sort By
+      </option>
+      <option
+        value="ascending-year"
+      >
+        Year (ascending)
+      </option>
+      <option
+        value="descending-year"
+      >
+        Year (descending)
+      </option>
+      <option
+        value="ascending-title"
+      >
+        Title (ascending)
+      </option>
+      <option
+        value="descending-title"
+      >
+        Title (descending)
+      </option>
+    </select>
+  </div>
+</div>
+`;

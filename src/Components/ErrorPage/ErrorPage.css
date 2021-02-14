@@ -1,0 +1,12 @@
+.error-page {
+  height: 58vh;
+}
+
+.error-page h2 {
+  position: fixed;
+  top: 20%;
+  left: 10%;
+}
+.error-page a {
+  text-decoration: none;
+}
