@@ -8,6 +8,7 @@ import { State } from "../../Redux/Reducers";
 import { Show } from "../../Redux/Reducers";
 
 const Movies: React.FC<State> = (props) => {
+  console.log(props);
   return (
     <div className="shows">
       <FilterShowItems placeholder={"movies"} />

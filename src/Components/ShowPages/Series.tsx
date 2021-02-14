@@ -7,6 +7,7 @@ import FilterShowItems from "../FilterShowItems/FilterShowItems";
 import { State, Show } from "../../Redux/Reducers";
 
 const Series: React.FC<State> = (props) => {
+  console.log(props);
   return (
     <div className="shows">
       <FilterShowItems placeholder={"series"} />
@@ -22,8 +23,8 @@ const Series: React.FC<State> = (props) => {
 const mapStateToProps = (state: State) => {
   return {
     series: getVisibleShows(state.series, state.filters),
-    filters: state.filters,
   };
 };
 
 export default connect(mapStateToProps)(Series);
+
