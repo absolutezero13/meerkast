@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/meerkast/static/css/main.dbbbec02.chunk.css",
+    "main.js": "/meerkast/static/js/main.17a4fa45.chunk.js",
+    "main.js.map": "/meerkast/static/js/main.17a4fa45.chunk.js.map",
+    "runtime-main.js": "/meerkast/static/js/runtime-main.ce5dbc7a.js",
+    "runtime-main.js.map": "/meerkast/static/js/runtime-main.ce5dbc7a.js.map",
+    "static/js/2.ce650585.chunk.js": "/meerkast/static/js/2.ce650585.chunk.js",
+    "static/js/2.ce650585.chunk.js.map": "/meerkast/static/js/2.ce650585.chunk.js.map",
+    "static/js/3.54e789c4.chunk.js": "/meerkast/static/js/3.54e789c4.chunk.js",
+    "static/js/3.54e789c4.chunk.js.map": "/meerkast/static/js/3.54e789c4.chunk.js.map",
+    "index.html": "/meerkast/index.html",
+    "static/css/main.dbbbec02.chunk.css.map": "/meerkast/static/css/main.dbbbec02.chunk.css.map",
+    "static/js/2.ce650585.chunk.js.LICENSE.txt": "/meerkast/static/js/2.ce650585.chunk.js.LICENSE.txt",
+    "static/media/mirket.b3c8945e.png": "/meerkast/static/media/mirket.b3c8945e.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ce5dbc7a.js",
+    "static/js/2.ce650585.chunk.js",
+    "static/css/main.dbbbec02.chunk.css",
+    "static/js/main.17a4fa45.chunk.js"
+  ]
+}
