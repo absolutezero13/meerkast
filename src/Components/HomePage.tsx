@@ -15,7 +15,7 @@ const HomePage: React.FC = () => {
         <HeaderTop />
         <HeaderBottom />
         <Switch>
-          <Route path="/" component={Body} exact={true} />
+          <Route path="/meerkast" component={Body} exact={true} />
           <Route path="/movies" component={Movies} exact={true} />
           <Route path="/series" component={Series} exact={true} />
           <Route component={NotFoundPage} />

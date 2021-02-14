@@ -5,7 +5,7 @@ const NotFoundPage: React.FC = () => {
   return (
     <div className="not-found-page">
       <h1>
-        ⚠️ PAGE NOT FOUND. GO BACK TO <Link to="/">HOME. ➡️</Link>
+        ⚠️ PAGE NOT FOUND. GO BACK TO <Link to="/meerkast">HOME. ➡️</Link>
       </h1>
     </div>
   );
