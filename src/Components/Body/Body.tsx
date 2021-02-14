@@ -12,7 +12,6 @@ const Body: React.FC = () => {
       <Link to="/series">
         <div className=" body__item">
           <p>SERIES </p>
-          <img src="../../../images/placeholder.png" alt="" />
         </div>
       </Link>
     </div>

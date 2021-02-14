@@ -25,10 +25,6 @@ exports[`body matches snapshot 1`] = `
         <p>
           SERIES 
         </p>
-        <img
-          alt=""
-          src="../../../images/placeholder.png"
-        />
       </div>
     </a>
   </div>
