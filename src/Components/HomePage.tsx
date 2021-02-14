@@ -9,12 +9,11 @@ import NotFoundPage from "./NotFoundPage/NotFoundPage";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 const HomePage: React.FC = () => {
-  const title = "Popular in Turkey";
   return (
     <BrowserRouter>
       <div>
         <HeaderTop />
-        <HeaderBottom title={title} />
+        <HeaderBottom />
         <Switch>
           <Route path="/" component={Body} exact={true} />
           <Route path="/movies" component={Movies} exact={true} />

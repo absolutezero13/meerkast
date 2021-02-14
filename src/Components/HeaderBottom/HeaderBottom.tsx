@@ -1,15 +1,11 @@
 import React from "react";
 import "./HeaderBottom.css";
 
-interface HeaderBottomProps {
-  title: string;
-}
-
-const HeaderBottom: React.FC<HeaderBottomProps> = (props) => {
+const HeaderBottom: React.FC = (props) => {
   console.log(props);
   return (
     <div className="header-bottom">
-      <h3>{props.title}</h3>
+      <h3>Popular in Turkey</h3>
     </div>
   );
 };

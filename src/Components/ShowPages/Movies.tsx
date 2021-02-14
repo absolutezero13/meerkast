@@ -6,9 +6,8 @@ import { connect } from "react-redux";
 import FilterShowItems from "../FilterShowItems/FilterShowItems";
 import { State } from "../../Redux/Reducers";
 import { Show } from "../../Redux/Reducers";
-
+import HeaderBottom from "../HeaderBottom/HeaderBottom";
 const Movies: React.FC<State> = (props) => {
-  console.log(props);
   return (
     <div className="shows">
       <FilterShowItems placeholder={"movies"} />
