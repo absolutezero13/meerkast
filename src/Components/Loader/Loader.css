@@ -4,8 +4,8 @@
 
 .loader {
   position: absolute;
-  top: 30%;
-  left: 45%;
+  top: 29vh;
+  left: 45vw;
   width: 6em;
   height: 6em;
   border: 1.1em solid rgba(0, 0, 0, 0.062);
@@ -13,10 +13,6 @@
   border-radius: 50%;
   animation: load8 1.1s infinite ease-out;
   transition: opacity 0.3s;
-}
-
-.loader--hide {
-  opacity: 0;
 }
 
 @keyframes load8 {
@@ -27,9 +23,9 @@
     transform: rotate(360deg);
   }
 }
-
-.loading p {
-  position: absolute;
-  top: 25%;
-  left: 43%;
+@media only screen and (max-width: 450px) {
+  .loader {
+    top: 29vh;
+    left: 37vw;
+  }
 }

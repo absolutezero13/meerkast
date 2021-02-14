@@ -46,9 +46,15 @@ body p {
   .body {
     flex-direction: column;
     padding-bottom: 30%;
+    align-items: center;
   }
   .body__item {
-    height: 12rem;
-    width: 12rem;
+    height: 10rem;
+    width: 10rem;
+  }
+  .body a {
+    text-decoration: none;
+    height: 10rem;
+    width: 10rem;
   }
 }
