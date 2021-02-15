@@ -1,8 +1,8 @@
 # Meerkast
 Meerkast is a wannabe streaming service where you can look at some of the movies' and series' pictures.
-Meanwhile behind the scenes there are;
+What this project includes;
 - React
 - Redux
-- Typescript
 - Hooks
+- Typescript
 - Unit testing
