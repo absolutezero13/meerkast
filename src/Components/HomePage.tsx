@@ -6,15 +6,20 @@ import Footer from "./Footer/Footer";
 import Movies from "./ShowPages/Movies";
 import Series from "./ShowPages/Series";
 import NotFoundPage from "./NotFoundPage/NotFoundPage";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { Router, Switch, Route } from "react-router-dom";
+import LoginPage from "./LoginPage/LoginPage";
+import { createBrowserHistory } from "history";
+
+export const history = createBrowserHistory();
 
 const HomePage: React.FC = () => {
   return (
-    <BrowserRouter>
+    <Router history={history}>
       <div>
         <HeaderTop />
         <HeaderBottom />
         <Switch>
+          <Route path="/" component={LoginPage} exact={true} />
           <Route path="/meerkast" component={Body} exact={true} />
           <Route path="/movies" component={Movies} exact={true} />
           <Route path="/series" component={Series} exact={true} />
@@ -22,7 +27,7 @@ const HomePage: React.FC = () => {
         </Switch>
         <Footer />
       </div>
-    </BrowserRouter>
+    </Router>
   );
 };
 

@@ -1,18 +1,34 @@
 import React from "react";
 import "./HeaderTop.css";
 import logo from "../../images/mirket.png";
+import { Link } from "react-router-dom";
+import { connect } from "react-redux";
+import { startLogout } from "../../Redux/Auth";
 
-const HeaderTop: React.FC = () => {
+interface headerProps {
+  startLogout: () => {};
+}
+const HeaderTop: React.FC<headerProps> = ({ startLogout }) => {
   return (
     <div className="header-top">
       <img src={logo} />
-      <h1>Meerkast</h1>
+      <Link to="/meerkast">
+        <h1>Meerkast </h1>
+      </Link>
       <div className="nav">
-        <p>Log in</p>
-        <button>Start your Free trial</button>
+        <Link to="/">
+          <button>Log in</button>
+        </Link>
+
+        <button onClick={startLogout}>Log out</button>
+        <p>Start your Free trial</p>
       </div>
     </div>
   );
 };
 
-export default HeaderTop;
+const mapDispatchToProps = (dispatch: any) => ({
+  startLogout: () => dispatch(startLogout()),
+});
+
+export default connect(undefined, mapDispatchToProps)(HeaderTop);

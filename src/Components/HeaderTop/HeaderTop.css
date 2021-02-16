@@ -19,7 +19,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 220px;
+  width: 290px;
   font-weight: 900;
 }
 
@@ -31,6 +31,11 @@
   font-weight: 600;
   height: 2rem;
   cursor: pointer;
+  margin-right: 1px;
+}
+.header-top a {
+  text-decoration: none;
+  color: white;
 }
 
 @media only screen and (max-width: 600px) {

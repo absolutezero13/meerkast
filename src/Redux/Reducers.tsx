@@ -34,7 +34,7 @@ const getData = (typeOfProgram: string) =>
       (entry) =>
         entry.programType === typeOfProgram && entry.releaseYear >= 2010
     )
-    .slice(0, 21)
+    .slice(0, 24)
     .sort((a, b) => {
       if (a.title === b.title) {
         return 0;

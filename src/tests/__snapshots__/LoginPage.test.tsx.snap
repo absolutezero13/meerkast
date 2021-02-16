@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match the snaphot 1`] = `
+<div>
+  <div
+    class="body"
+  >
+    <button
+      class="login-btn"
+    >
+      Log in with Google
+    </button>
+  </div>
+   
+</div>
+`;
