@@ -1,0 +1,67 @@
+.contact {
+  height: 68vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  width: 20em;
+  align-items: center;
+}
+label {
+  align-self: flex-start;
+}
+textarea {
+  max-width: 500px;
+  max-height: 200px;
+  height: 10rem;
+}
+.name,
+.email,
+.message {
+  width: 24em;
+  margin: 2% 0 2% 0;
+  box-shadow: 3px 3px 8px gray;
+  outline: none;
+}
+.name:focus,
+.email:focus,
+.message:focus {
+  border: 2px solid rgba(17, 17, 179, 0.137);
+}
+
+.contact-form button {
+  outline: none;
+  background: rgba(1, 126, 254, 255);
+  color: white;
+  font-size: 18px;
+  border-radius: 10px;
+  font-weight: 1000;
+  cursor: pointer;
+}
+.contact-form button:hover {
+  opacity: 0.85;
+}
+.contact-form button:active {
+  transform: translateY(2px);
+  border-bottom: 3px solid blue;
+}
+@media only screen and (max-width: 400px) {
+  .name,
+  .email,
+  .message {
+    width: 16em;
+    margin: 2% 0 2% 0;
+    box-shadow: 3px 3px 8px gray;
+    outline: none;
+  }
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    width: 14em;
+    align-items: center;
+  }
+}

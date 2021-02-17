@@ -1,11 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Extras.css";
 const Extras: React.FC = () => {
   const extraArray = [
     "Home",
     "Terms of Conditions",
     "Privacy Policy",
-    "Collection Statement",
+
     "Help",
     "Manage Account",
   ];
@@ -15,6 +16,9 @@ const Extras: React.FC = () => {
         {extraArray.map((e: string, i: number) => (
           <p key={i}>{e}</p>
         ))}
+        <Link to="/contact">
+          <p>Contact</p>
+        </Link>
       </div>
       <p className="copyright">
         Copyright Ⓒ 2021 Meerkast. All Rights Reserved.
