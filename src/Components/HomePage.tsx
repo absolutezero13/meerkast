@@ -9,7 +9,8 @@ import NotFoundPage from "./NotFoundPage/NotFoundPage";
 import { Router, Switch, Route } from "react-router-dom";
 import LoginPage from "./LoginPage/LoginPage";
 import { createBrowserHistory } from "history";
-
+import PrivateRoute from "./PrivateRoute";
+import PublicRoute from "./PublicRoute";
 export const history = createBrowserHistory();
 
 const HomePage: React.FC = () => {
