@@ -30,7 +30,10 @@ firebase.auth().onAuthStateChanged((user) => {
   if (user) {
     renderApp();
     store.dispatch(login(user.uid));
-    if (history.location.pathname == "/") {
+    if (
+      history.location.pathname == "/" ||
+      history.location.pathname == "/signup"
+    ) {
       history.push("/meerkast");
     }
     console.log("logged in");

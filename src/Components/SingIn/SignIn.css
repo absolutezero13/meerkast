@@ -1,0 +1,21 @@
+.signin {
+  display: flex;
+  flex-direction: column;
+}
+.signin button {
+  align-self: center;
+  outline: none;
+  background: rgba(1, 126, 254, 255);
+  color: white;
+  font-size: 18px;
+  border-radius: 10px;
+  font-weight: 1000;
+  cursor: pointer;
+  padding: 5px;
+  transition: all 0.2s ease;
+  margin: 10px 0 10px 0;
+}
+
+.signin button:active {
+  transform: translateY(5%);
+}

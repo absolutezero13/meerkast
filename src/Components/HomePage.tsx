@@ -12,6 +12,8 @@ import { createBrowserHistory } from "history";
 import PrivateRoute from "./PrivateRoute";
 import PublicRoute from "./PublicRoute";
 import Contact from "./Contact/Contact";
+import SignUp from "./SignUp/SignUp";
+
 export const history = createBrowserHistory();
 
 const HomePage: React.FC = () => {
@@ -22,12 +24,14 @@ const HomePage: React.FC = () => {
         <HeaderBottom />
         <Switch>
           <Route path="/" component={LoginPage} exact={true} />
+          <Route path="/signup" component={SignUp} exact={true} />
           <Route path="/meerkast" component={Body} exact={true} />
           <Route path="/movies" component={Movies} exact={true} />
           <Route path="/series" component={Series} exact={true} />
           <Route path="/contact" component={Contact} exact={true} />
           <Route component={NotFoundPage} />
         </Switch>
+
         <Footer />
       </div>
     </Router>

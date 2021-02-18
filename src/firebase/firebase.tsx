@@ -17,7 +17,16 @@ firebase.analytics();
 
 const database = firebase.database;
 const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
-export { firebase, googleAuthProvider, database as default };
+const facebookAuthProvider = new firebase.auth.FacebookAuthProvider();
+const emailAuthProvider = new firebase.auth.EmailAuthProvider();
+// const signUpAuthProvider = new firebase.auth.EmailAuthProvider();
+export {
+  firebase,
+  googleAuthProvider,
+  facebookAuthProvider,
+  emailAuthProvider,
+  database as default,
+};
 // database().ref("users").push({
 //   username: "absolutezero",
 //   password: "urmom",
