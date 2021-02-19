@@ -20,12 +20,6 @@ const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
 const facebookAuthProvider = new firebase.auth.FacebookAuthProvider();
 const emailAuthProvider = new firebase.auth.EmailAuthProvider();
 
-database()
-  .ref("messages")
-  .on("value", (snap) => {
-    console.log(snap.val());
-  }); // this is how you get data
-
 // const signUpAuthProvider = new firebase.auth.EmailAuthProvider();
 export {
   firebase,
