@@ -1,8 +1,10 @@
-import React, { EventHandler, useRef } from "react";
+import React, { EventHandler, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import "./SignIn.css";
 import { firebase } from "../../firebase/firebase";
+
 const SignIn: React.FC = () => {
+  const [invalidUser, setInvalidUser] = useState<boolean>(false);
   const emailref = useRef<HTMLInputElement>(null);
   const passwordRef = useRef<HTMLInputElement>(null);
 
@@ -15,7 +17,10 @@ const SignIn: React.FC = () => {
       firebase
         .auth()
         .signInWithEmailAndPassword(email, password)
-        .then((credential) => console.log(credential));
+        .then((credential) => setInvalidUser(false))
+        .catch(() => {
+          setInvalidUser(true);
+        });
     }
   };
 
@@ -26,10 +31,11 @@ const SignIn: React.FC = () => {
       <label>Password</label>
       <input ref={passwordRef} type="password" />
       <button>Sing In !</button>
+      {invalidUser && <p>⚠️ Invalid E-mail or password.</p>}
       <p>
         Don't have an account?
         <Link to="/signup">
-          <span>Create Account</span>
+          <span> Create Account</span>
         </Link>
       </p>
     </form>

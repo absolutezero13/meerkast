@@ -11,14 +11,20 @@ export interface PrivateRoute {
 
 const PrivateRoute: React.FC<PrivateRoute> = ({
   isLoggedIn,
-  component,
+  component: Component,
   ...rest
 }) => {
   return (
     <Route
       {...rest}
       component={(props: any) =>
-        isLoggedIn ? <Component {...props} /> : <Redirect to="/" />
+        isLoggedIn ? (
+          <Component {...props} />
+        ) : (
+          <div>
+            <Redirect to="/" />;
+          </div>
+        )
       }
     />
   );

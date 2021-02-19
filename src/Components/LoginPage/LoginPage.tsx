@@ -14,7 +14,7 @@ const LoginPage: React.FC<loginProps> = ({
   startLoginFacebook,
 }) => {
   return (
-    <div className="body login">
+    <div className=" login">
       <img
         src={signWithGoogle}
         onClick={startLogin}

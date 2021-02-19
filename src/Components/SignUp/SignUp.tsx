@@ -35,11 +35,23 @@ const SignUp = () => {
   return (
     <form onSubmit={submitHandler} ref={formRef} className="signup">
       <p>Email</p>
-      <input ref={emailref} type="email" />
+      <input
+        ref={emailref}
+        onChange={() => setInvalidValues(false)}
+        type="email"
+      />
       <p>Password</p>
-      <input ref={passwordRef} type="password" />
+      <input
+        ref={passwordRef}
+        onChange={() => setInvalidValues(false)}
+        type="password"
+      />
       <p>Password Confirmation</p>
-      <input ref={passwordConfirmRef} type="password" />
+      <input
+        ref={passwordConfirmRef}
+        onChange={() => setInvalidValues(false)}
+        type="password"
+      />
       <button>Sign Up !</button>
       {invalidValues && (
         <p>

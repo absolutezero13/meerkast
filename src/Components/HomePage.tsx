@@ -23,11 +23,11 @@ const HomePage: React.FC = () => {
         <HeaderTop />
         <HeaderBottom />
         <Switch>
-          <Route path="/" component={LoginPage} exact={true} />
-          <Route path="/signup" component={SignUp} exact={true} />
-          <Route path="/meerkast" component={Body} exact={true} />
-          <Route path="/movies" component={Movies} exact={true} />
-          <Route path="/series" component={Series} exact={true} />
+          <PublicRoute path="/" component={LoginPage} exact={true} />
+          <PublicRoute path="/signup" component={SignUp} exact={true} />
+          <PrivateRoute path="/meerkast" component={Body} exact={true} />
+          <PrivateRoute path="/movies" component={Movies} exact={true} />
+          <PrivateRoute path="/series" component={Series} exact={true} />
           <Route path="/contact" component={Contact} exact={true} />
           <Route component={NotFoundPage} />
         </Switch>

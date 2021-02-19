@@ -5,7 +5,7 @@ import { PrivateRoute } from "./PrivateRoute";
 
 const PublicRoute: React.FC<PrivateRoute> = ({
   isLoggedIn,
-  component,
+  component: Component,
   ...rest
 }) => {
   return (
