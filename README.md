@@ -6,4 +6,5 @@ What this project includes;
 - Hooks
 - Typescript
 - Unit testing
+- Login with Google, Facebook and Email
 #-
