@@ -6,7 +6,7 @@ import Footer from "./Footer/Footer";
 import Movies from "./ShowPages/Movies";
 import Series from "./ShowPages/Series";
 import NotFoundPage from "./NotFoundPage/NotFoundPage";
-import { Router, Switch, Route } from "react-router-dom";
+import { Router, Switch, Route, HashRouter } from "react-router-dom";
 import LoginPage from "./LoginPage/LoginPage";
 import { createBrowserHistory } from "history";
 import PrivateRoute from "./PrivateRoute";
@@ -18,7 +18,7 @@ export const history = createBrowserHistory();
 
 const HomePage: React.FC = () => {
   return (
-    <Router history={history}>
+    <HashRouter>
       <div>
         <HeaderTop />
         <HeaderBottom />
@@ -34,7 +34,7 @@ const HomePage: React.FC = () => {
 
         <Footer />
       </div>
-    </Router>
+    </HashRouter>
   );
 };
 
